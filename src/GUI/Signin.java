@@ -1,6 +1,7 @@
 package GUI;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import javax.swing.JOptionPane;
 
 public class Signin extends javax.swing.JFrame {
 
@@ -37,6 +38,11 @@ public class Signin extends javax.swing.JFrame {
         });
 
         jButton1.setText("Sign In");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -94,6 +100,17 @@ public class Signin extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
          // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        String username = jTextField1.getText();
+        String password = String.valueOf(jPasswordField1.getPassword());
+        
+        if(username.isBlank()){
+//            JOptionPane.showMessageDialog(rootPane, username, username, HEIGHT, icon);
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         
